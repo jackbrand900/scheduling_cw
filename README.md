@@ -2,7 +2,7 @@
 
 ## scheduling_LCL.ipynb
 
-This Jupyter notebook implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
+scheduling_LCL.ipynb implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
 
 ## 1. Setup and Requirements
 
@@ -31,7 +31,7 @@ The last cell will execute the LCL rule, taking in the dag, processing times, an
 ---
 
 ## coursework.ipynb
-This Jupyter notebook implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
+coursework.ipynb implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
 
 ## 1. Setup and Requirements
 
