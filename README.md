@@ -1,6 +1,37 @@
-Scheduling and Resource Allocation Coursework
+## Scheduling and Resource Allocation Coursework
 
-This Jupyter notebook implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
+## scheduling_LCL.ipynb
+
+scheduling_LCL.ipynb implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
+
+## 1. Setup and Requirements
+
+This script requires the following Python libraries:
+
+- **numpy**: For array manipulation and numerical computations.
+
+## 2. Functions
+
+### `build_graph(edges)`
+This function returns an inverted graph mapping successors to predecessors through an adjacency list and a dictionary mapping each node to its number of succesors, given the dag.
+
+### `tardiness(C, dd)`
+Calculates the tardiness given a completion time and due date for a job
+
+### `least_cost_last(dag, processing_times, due_dates)`
+
+Implements the Least Cost Last Rule to optimize the schedule by minimizing the maximum cost. The algorithm iterates backwards, determining all available jobs to be scheduled last by checking which have no successors left to be scheduled. Then, it computes the cost for each job to be scheduled last and schedules the one with least cost. We then reduce the number of successors for jobs that preceeded the currently scheduled job and continue the process.
+
+---
+
+## 3. Running the Script
+
+The last cell will execute the LCL rule, taking in the dag, processing times, and due dates defined in the first cell of the notebook. It will then print various iterations of the algorithm with the corresponding schedule at that time and the final iteration with the final cost of the schedule.
+
+---
+
+## tabu_search.ipynb
+tabu_search.ipynb implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
 
 ## 1. Setup and Requirements
 
@@ -27,7 +58,7 @@ Generates a neighboring schedule by swapping tasks `job_i` and `job_j` at the gi
 Evaluates the tardiness of a given schedule by calculating the total tardiness across all tasks in the schedule.
 
 ### `tabu_search(dag, p, d, num_iterations=100, tolerance=10, tabu_list_length=20, verbose=False)`
-Implements the Tabu Search algorithm to optimize the schedule. It iterates through neighboring schedules, avoiding tabu solutions and accepting improvements if they reduce tardiness or are within the tolerance threshold of an intermediate / current solution. In order to see the status of the Tabu Search (current schedule, current tardiness, neighboring schedule, neighboring tardiness, best schedule, best tardiness, etc.), you should run tabu_search with verbose = True. An example printout of our Tabu Search implementation is found in prinout.txt.
+Implements the Tabu Search algorithm to optimize the schedule. It iterates through neighboring schedules, avoiding tabu solutions and accepting improvements if they reduce tardiness or are within the tolerance threshold of an intermediate / current solution. **In order to see the status of the Tabu Search (current schedule, current tardiness, neighboring schedule, neighboring tardiness, best schedule, best tardiness, etc.), you should run tabu_search with verbose = True**. An example printout of our Tabu Search implementation is found in tabu_search_printout.txt.
 
 ---
 
