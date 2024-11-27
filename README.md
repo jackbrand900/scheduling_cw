@@ -18,7 +18,9 @@ This function returns an inverted graph mapping successors to predecessors throu
 Calculates the tardiness given a completion time and due date for a job
 
 ### `least_cost_last(dag, processing_times, due_dates)`
+
 Implements the Least Cost Last Rule to optimize the schedule by minimizing the maximum cost. The algorithm iterates backwards, determining all available jobs to be scheduled last by checking which have no successors left to be scheduled. Then, it computes the cost for each job to be scheduled last and schedules the one with least cost. We then reduce the number of successors for jobs that preceeded the currently scheduled job and continue the process.
+
 ---
 
 ## 3. Running the Script
