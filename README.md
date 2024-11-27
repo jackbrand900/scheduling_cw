@@ -27,7 +27,7 @@ Generates a neighboring schedule by swapping tasks `job_i` and `job_j` at the gi
 Evaluates the tardiness of a given schedule by calculating the total tardiness across all tasks in the schedule.
 
 ### `tabu_search(dag, p, d, num_iterations=100, tolerance=10, tabu_list_length=20, verbose=False)`
-Implements the Tabu Search algorithm to optimize the schedule. It iterates through neighboring schedules, avoiding tabu solutions and accepting improvements if they reduce tardiness or are within the tolerance threshold of an intermediate / current solution. In order to see the status of the Tabu Search (current schedule, current tardiness, neighboring schedule, neighboring tardiness, best schedule, best tardiness, etc.), you should run tabu_search with verbose = True.
+Implements the Tabu Search algorithm to optimize the schedule. It iterates through neighboring schedules, avoiding tabu solutions and accepting improvements if they reduce tardiness or are within the tolerance threshold of an intermediate / current solution. In order to see the status of the Tabu Search (current schedule, current tardiness, neighboring schedule, neighboring tardiness, best schedule, best tardiness, etc.), you should run tabu_search with verbose = True. An example printout of our Tabu Search implementation is found in prinout.txt.
 
 ---
 
