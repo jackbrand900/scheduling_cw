@@ -1,8 +1,8 @@
 ## Scheduling and Resource Allocation Coursework
 
-## scheduling_LCL.ipynb
+## LCL.ipynb
 
-scheduling_LCL.ipynb implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
+LCL.ipynb implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
 
 ## 1. Setup and Requirements
 
