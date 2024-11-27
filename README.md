@@ -30,8 +30,8 @@ The last cell will execute the LCL rule, taking in the dag, processing times, an
 
 ---
 
-## coursework.ipynb
-coursework.ipynb implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
+## tabu_search.ipynb
+tabu_search.ipynb implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
 
 ## 1. Setup and Requirements
 
