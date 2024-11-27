@@ -1,6 +1,32 @@
 Scheduling and Resource Allocation Coursework
 
 
+(scheduling_LCL.ipynb) This Jupyter notebook implements a **Least Cost Last Rule** to optimize scheduling for a given workflow, with an objective of minimizing the maximum cost.
+
+## 1. Setup and Requirements
+
+This script requires the following Python libraries:
+
+- **numpy**: For array manipulation and numerical computations.
+
+## 2. Functions
+
+### `build_graph(edges)`
+This function returns an inverted graph mapping successors to predecessors through an adjacency list and a dictionary mapping each node to its number of succesors, given the dag.
+
+### `tardiness(C, dd)`
+Calculates the tardiness given a completion time and due date for a job
+
+### `least_cost_last(dag, processing_times, due_dates)`
+Implements the Least Cost Last Rule to optimize the schedule by minimizing the maximum cost. The algorithm iterates backwards, determining all available jobs to be scheduled last by checking which have no successors left to be scheduled. Then, it computes the cost for each job to be scheduled last and schedules the one with least cost. We then reduce the number of successors for jobs that preceeded the currently scheduled job and continue the process.
+---
+
+## 3. Running the Script
+
+The last cell will execute the LCL rule, taking in the dag, processing times, and due dates defined in the first cell of the notebook. It will then print various iterations of the algorithm with the corresponding schedule at that time and the final iteration with the final cost of the schedule.
+
+
+
 (coursework.ipynb) This Jupyter notebook implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
 
 ## 1. Setup and Requirements
