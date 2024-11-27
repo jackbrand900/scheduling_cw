@@ -1,6 +1,7 @@
 Scheduling and Resource Allocation Coursework
 
-This Jupyter notebook implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
+
+(coursework.ipynb) This Jupyter notebook implements a **Tabu Search Algorithm** to optimize scheduling for a given workflow, with an objective of minimizing tardiness.
 
 ## 1. Setup and Requirements
 
